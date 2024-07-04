@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+            
+
+    body{
+        margin:0;
+        padding:0;
+        background-color: black;
+        color: white;
+        font-family:Poppins;
+    }
+
+    .nav-item{
+
+        font-size: 1.2rem;
+        padding: 0rem 1rem 0rem 1rem;
+    }
+
+    .navbar-nav{
+        margin-left: 50px;
+    }
+
+    .navbar-custom{
+        background-color: #D00000;
+    }
+
+    .search-button{
+        background-color: #32D904;
+        color: white;
+    }
+
+    #landing, #location, #famous{
+
+        margin:5rem 0rem 5rem 0rem;
+        
+    }
+
+    h4{
+        color: #32D904;
+        font-weight: 300;
+        font-size: 23   px;
+    }
+
+    h3{
+        font-size: 28px;
+    }
+
+    .main{
+        font-weight: 800;
+        font-size: 90px;
+    }
+
+    .main-2{
+        font-size:60px;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .text{
+        font-size: 22px;
+        margin-top:1rem;
+        color:#32D904;
+       
+    }
+
+    .hotel-text{
+        font-size: 16px;
+        font-weight: 300;
+        text-align: justify ;
+    }
+
+    .email-button{
+        color: white;
+        background-color: #D00000;
+        --bs-btn
+    }
+
+    .email{
+        margin-right:7.6rem;
+        margin-top:2rem;
+    }
+
+
+    .img{
+        height: auto;
+        max-width: 90vh;
+    }
+
+    .img-fluid{
+        height:30rem;
+    }
+
+    .hotel-img{
+        height: 200px;
+    }
+
+
+    .border-color{
+
+       border-color: #D00000 !important;
+       border-width: 0.15rem !important;
+
+    }
+
+    </style>
+
+    <script>
+
+        function showfunc(){
+           document.getElementById("map").setAttribute("src",`https://www.google.com/maps/embed/v1/search?key=AIzaSyBbQ9MN8_f9a5HUxb6K4SaKW9aSwiLaugg&q=hotels+in+${(document.getElementById("location-search").value)}`);
+        }
+
+    </script>
+</head>
+
+<body>
+    
+        <!-- Background page navbar with search -->
+        <nav class="navbar navbar-custom navbar-expand-lg py-0" data-bs-theme="dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <img src="channels4_profile.jpg" width="40px" class="my-1 d-inline-block align-text-top" style="border-radius:50%">
+            </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Agency</a>
+                  </li>                  
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Locations</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Contact</a>
+                  </li>
+                </ul>
+                <form class="d-flex me-2" role="search">
+                  <input class="form-control  rounded-start-4 rounded-end-0" type="search" placeholder="Enter Location" aria-label="Search">
+                  <button class="btn search-button rounded-end-4 rounded-start-0" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+          <section id="landing">
+         <div class="container">
+
+            <div class="m-lg-5 m-sm-0 row d-flex flex-md-column flex-lg-row justify-content-center align-items-center">
+
+                <div class="col-xl-7 d-flex flex-column">
+                    
+                    <h1 class="main">Book Your Perfect <span style="color:#D00000">Hotel</span></h1>
+                    <ul class="text list-unstyled">
+                    <li>Top-rated hotels at unbeatable prices</li>
+                    <li>Easy booking, best deals, 24/7 support</li>
+                    <li>Book Now!</li>
+                    </ul>
+                    
+                    <div class="email">                
+                        <form class="d-flex" role="search">
+                            <input class="form-control rounded-start-3 me-2 rounded-end-3 " type="search" placeholder="Enter your E-mail" aria-label="Search">
+                            <button class="btn btn-danger rounded-end-3 rounded-start-3 col-2" type="submit">Sign Up</button>
+                          </form>
+                    </div>
+
+                </div>
+
+            <div class="col-5 d-sm-none d-xl-flex">
+
+                <img src="plane.png" width="800px" class="img">
+
+            </div>
+
+            </div>
+
+         </div>
+        
+
+    </section>
+<hr>
+    <section id="location">
+
+        <h1 class="main-2">Explore</h1>
+        <!-- Search Bar with locations on the left
+            Map on the Right Side -->
+
+        <div class="container m-lg-5 m-sm-1 d-flex flex-column justify-content-center ">
+
+            <div class="row search-bars d-sm-flex align-items-center">
+                
+                <div class="col-lg-11 col-sm-9">
+                    <input type="location" class="form-control form-control-lg" id="location-search" placeholder="Enter Location">
+                </div>
+                <div class="col-lg-1 col-sm-3">
+                    <button class="btn btn-danger btn-lg" onclick="showfunc()" type="submit" id="search-button">Search</button>
+                </div>
+
+            </div>
+
+            <div class="graphics row mt-4"> 
+
+                <div class="map col">
+                    <iframe class="img-fluid" id="map" width="1500" height="450" style="border-radius:1rem" loading="lazy" 
+                    allowfullscreen src="https://www.google.com/maps/embed/v1/search?key=AIzaSyBbQ9MN8_f9a5HUxb6K4SaKW9aSwiLaugg&q=hotels+in+sri+lanka">
+                    </iframe>
+            </div>
+
+        </div>
+   
+    </section>
+
+    <hr>
+
+    <section id="famous">
+        <!-- Hotels Carousel -->
+
+        <h1 class="main-2"> Best Deals</h1>
+
+        <div class="container m-lg-5 m-sm-1 d-flex flex-column justify-content-center align-content-center">
+
+            <div class="row g-5 d-flex justify-content-center align-content-center mb-5">
+
+                <div class="col-3">
+                <div class="card text-bg-dark bg-black border mg-0 p-0 border-color rounded-4" style="width: 20rem;">
+                    <img src="hotel1.jpg" class="card-img-top hotel-img rounded-top-4" alt="...">
+                    <div class="card-body p-3">
+                        <h3 class="card-text">Hilton Galle</h3>
+                        <h4 class="card-text">$190</h4>
+                      <p class="card-text hotel-text">Luxurious Hotel situated in Galle city with Picturesque views, Free Wi-Fi, Parking and world renowed SPA...</p><br>
+                      <a class="card-text link-primary hotel-text" href="https://t.ly/gYLme">Learn More</a>
+                    </div> 
+                  </div>
+                  </div>
+                
+                  <div class="col-3">
+                  <div class="card text-bg-dark bg-black border mg-0 p-0 border-color rounded-4" style="width: 20rem;">
+                    <img src="hotel3.jpg" class="card-img-top hotel-img rounded-top-4" alt="...">
+                    <div class="card-body p-3">
+                        <h3 class="card-text">Merriot Galle</h3>
+                        <h4 class="card-text">$690</h4>
+                      <p class="card-text hotel-text">Luxurious Hotel situated in Galle beach with Picturesque views, Free Wi-Fi, Parking and world renowed SPA...</p> 
+                      <a class="card-text link-primary hotel-text" href="https://t.ly/gYLme">Learn More</a>
+                    </div> 
+                  </div>
+                  </div>
+
+                  <div class="col-3">
+                  <div class="card text-bg-dark bg-black border mg-0 p-0 border-color rounded-4" style="width: 20rem;">
+                    <img src="hotel4.jpg" class="card-img-top hotel-img rounded-top-4" alt="...">
+                    <div class="card-body p-3">
+                        <h3 class="card-text">Cinnamon Grand</h3>
+                        <h4 class="card-text">$575</h4>
+                      <p class="card-text hotel-text">Luxurious Hotel situated in Colombo city with Picturesque views, Free Wi-Fi, Parking and world renowed SPA...</p><br>
+                      <a class="card-text link-primary hotel-text" href="https://t.ly/gYLme">Learn More</a>
+                    </div> 
+                  </div>
+                  </div>
+
+                  <div class="col-3">
+                  <div class="card text-bg-dark bg-black border mg-0 p-0 border-color rounded-4" style="width: 20rem;">
+                    <img src="hotel5.jpg" class="card-img-top hotel-img rounded-top-4" alt="...">
+                    <div class="card-body p-3">
+                        <h3 class="card-text">Amari</h3>
+                        <h4 class="card-text">$389</h4>
+                      <p class="card-text hotel-text">Luxurious Hotel situated in Kurunegala city with Picturesque views, Free Wi-Fi, Parking and world renowed SPA...</p>
+                      <a class="card-text link-primary hotel-text" href="https://t.ly/gYLme">Learn More</a>
+                    </div> 
+                  </div>
+                  </div>
+
+            </div>
+
+            <div class="row g-5 d-flex justify-content-center align-content-center">
+
+                <div class="col-3">
+                <div class="card text-bg-dark bg-black border mg-0 p-0 border-color rounded-4" style="width: 20rem;">
+                    <img src="hotel6.jpg" class="card-img-top hotel-img rounded-top-4" alt="...">
+                    <div class="card-body p-3">
+                        <h3 class="card-text">NJ Home Stay</h3>
+                        <h4 class="card-text">$42</h4>
+                      <p class="card-text hotel-text">Luxurious Hotel situated in Matale city with Classic Cars, 8-tonne.. stuff, Kestrals and world renowed Super Cub...</p>
+                      <a class="card-text link-primary hotel-text" href="https://t.ly/gYLme">Learn More</a>
+                    </div> 
+                  </div>
+                  </div>
+                
+                  <div class="col-3">
+                  <div class="card text-bg-dark bg-black border mg-0 p-0 border-color rounded-4" style="width: 20rem;">
+                    <img src="hotel7.jpg" class="card-img-top hotel-img rounded-top-4" alt="...">
+                    <div class="card-body p-3">
+                        <h3 class="card-text">Heritage Grand</h3>
+                        <h4 class="card-text">$260</h4>
+                      <p class="card-text hotel-text">Luxurious Hotel situated in Ella city with Picturesque views, Free Wi-Fi, Parking and world renowed SPA...</p><br>
+                      <a class="card-text link-primary hotel-text" href="https://t.ly/gYLme">Learn More</a>
+                    </div> 
+                  </div>
+                  </div>
+
+                  <div class="col-3">
+                  <div class="card text-bg-dark bg-black border mg-0 p-0 border-color rounded-4" style="width: 20rem;">
+                    <img src="hotel8.jpg" class="card-img-top hotel-img rounded-top-4" alt="...">
+                    <div class="card-body p-3">
+                        <h3 class="card-text">Galle Face Resort</h3>
+                        <h4 class="card-text">$1690</h4>
+                      <p class="card-text hotel-text">Luxurious Hotel situated in Port city with Picturesque views, Free Wi-Fi, Parking and world renowed SPA...</p><br>
+                      <a class="card-text link-primary hotel-text" href="https://t.ly/gYLme">Learn More</a>
+                    </div> 
+                  </div>
+                  </div>
+
+                  <div class="col-3">
+                  <div class="card text-bg-dark bg-black border mg-0 p-0 border-color rounded-4" style="width: 20rem;">
+                    <img src="hotel9.jpg" class="card-img-top hotel-img rounded-top-4" alt="...">
+                    <div class="card-body p-3">
+                        <h3 class="card-text">Queens Hotel</h3>
+                        <h4 class="card-text">$540</h4>
+                      <p class="card-text hotel-text">Luxurious Hotel situated in Kandy city with Picturesque views, Free Wi-Fi, Parking and world renowed SPA...</p><br>
+                      <a class="card-text link-primary hotel-text" href="https://t.ly/gYLme">Learn More</a>
+                    </div> 
+                  </div>
+                  </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    
+
+    <section id="footer">
+        <!-- Remove the container if you want to extend the Footer to full width. -->
+
+        <hr>
+    <!-- Footer -->
+    <footer class="text-center text-lg-start text-white">
+        <!-- Right -->
+       
+      <!-- Section: Links  -->
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <!-- Content -->
+              <h6 class="text-uppercase fw-bold">Triva Don't Go</h6>
+              <hr
+                  class="mb-4 mt-0 d-inline-block mx-auto"
+                  style="width: 60px; background-color: #7c4dff; height: 2px"
+                  />
+              <p>
+                Book the best hotels for the lowest prices using our website. Our website is #1 in Trip
+                Advisor listings. You will have the best trip using our website. Seriously, just sign up already.
+              </p>
+            </div>
+            <!-- Grid column -->
+  
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold">Products</h6>
+              <hr
+                  class="mb-4 mt-0 d-inline-block mx-auto"
+                  style="width: 60px; background-color: #7c4dff; height: 2px"
+                  />
+              <p>
+                <a href="https://t.ly/gYLme" class="text-white">Hotels</a>
+              </p>
+              <p>
+                <a href="https://t.ly/gYLme" class="text-white">Agency</a>
+              </p>
+              <p>
+                <a href="https://t.ly/gYLme" class="text-white">Rental</a>
+              </p>
+              <p>
+                <a href="https://t.ly/gYLme" class="text-white">Restaurants</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+  
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold">Our Socials</h6>
+              <hr
+                  class="mb-4 mt-0 d-inline-block mx-auto"
+                  style="width: 60px; background-color: #7c4dff; height: 2px"
+                  />
+              <p>
+                <a href="https://t.ly/gYLme" class="text-white">Facebook</a>
+              </p>
+              <p>
+                <a href="https://t.ly/gYLme" class="text-white">Instagram</a>
+              </p>
+              <p>
+                <a href="https://t.ly/gYLme" class="text-white">SnapChat</a>
+              </p>
+              <p>
+                <a href="https://t.ly/gYLme" class="text-white">MySpace</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+  
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold">Contact</h6>
+              <hr
+                  class="mb-4 mt-0 d-inline-block mx-auto"
+                  style="width: 60px; background-color: #7c4dff; height: 2px"
+                  />
+              <p><i class="fas fa-home mr-3"></i> 67th Floor, KCC, Horowpathana, LK</p>
+              <p><i class="fas fa-envelope mr-3"></i> trivadontgo@hotmail.com</p>
+              <p><i class="fas fa-phone mr-3"></i> +94 77 420 6969</p>
+              <p><i class="fas fa-print mr-3"></i> +94 72 020 2007</p>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+      <!-- Section: Links  -->
+  
+      <!-- Copyright -->
+      <div
+           class="text-center p-3"
+           style="background-color: #D00000;"
+           >
+        © 2024 Copyright:
+        <a class="text-white" href="https://t.ly/gYLme"
+           >trivadontgo.com</a
+          >
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+  
+  
+  <!-- End of .container -->
+
+        
+    </section>
+    
+</body>
+
+</html>
